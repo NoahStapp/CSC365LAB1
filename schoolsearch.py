@@ -41,36 +41,69 @@ def createStudents(inputFile):
 
 def main():
     students = createStudents("students.txt")
-    #studentInfo(students, "COMO")
-    #studentBusRoute(students, "COMO")
-    #teacherStudents(students, "HANTZ", "JED")
-    #busRoute(students, 52)
-    #gradeLevel(students, 3)
-    maxGradeLevel(students, 3)
-    #print(students)
+    # studentInfo(students, "COMO")
+    # studentBusRoute(students, "COMO")
+    # teacherStudents(students, "HANTZ", "JED")
+    # busRoute(students, 52)
+    # gradeLevel(students, 3)
+    # maxGradeLevel(students, 3)
+    # print(students)
+
+    while 1:
+        user_input = input("").split(" ")
+
+        if user_input[0] == "Q" or user_input[0] == "Quit":
+            break
+        elif user_input[0] == "S:" or user_input[0] == "Student:":
+            if len(user_input) == 2:
+                print(studentInfo(students, user_input[1].upper()))
+            else:
+                print(studentInfoBusRoute(students, user_input[1].upper()))
+        elif user_input[0] == "T:" or user_input[0] == "Teacher:":
+            print(teacherStudents(students, user_input[1].upper()))
+
 
 def studentInfo(students, name):
-    print(students.loc[students['lastName'] == name][['grade', 'classroom', 'teacherLastName', 'teacherFirstName']])
+    print(
+        students.loc[students["lastName"] == name][
+            [
+                "lastName",
+                "firstName",
+                "grade",
+                "classroom",
+                "teacherLastName",
+                "teacherFirstName",
+            ]
+        ]
+    )
 
-def studentBusRoute(students, name):
-    print(students.loc[students['lastName'] == name]['bus'])
 
-def teacherStudents(students, lastName, firstName):
-    print(students.loc[(students['teacherFirstName'] == firstName) & (students['teacherLastName'] == lastName)][['lastName', 'firstName']])
+def studentInfoBusRoute(students, name):
+    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]])
+
+
+def teacherStudents(students, lastName):
+    print(
+        students.loc[(students["teacherLastName"] == lastName)][
+            ["lastName", "firstName"]
+        ]
+    )
+
 
 def busRoute(students, busRoute):
-    print(students.loc[students['bus'] == busRoute][['lastName', 'firstName']])
+    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]])
+
 
 def gradeLevel(students, grade):
-    print(students.loc[students['grade'] == grade][['lastName', 'firstName']])
+    print(students.loc[students["grade"] == grade][["lastName", "firstName"]])
+
 
 def avgGradeLevel(students, grade):
-    print(students.loc[students['grade'] == grade]['GPA'].mean())
+    print(students.loc[students["grade"] == grade]["GPA"].mean())
+
 
 def maxGradeLevel(students, grade):
-    print(students.loc[students['grade'] == grade]['GPA'].max())
-
-
+    print(students.loc[students["grade"] == grade]["GPA"].max())
 
 
 if __name__ == "__main__":
