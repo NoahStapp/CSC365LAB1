@@ -41,13 +41,6 @@ def createStudents(inputFile):
 
 def main():
     students = createStudents("students.txt")
-    # studentInfo(students, "COMO")
-    # studentBusRoute(students, "COMO")
-    # teacherStudents(students, "HANTZ", "JED")
-    # busRoute(students, 52)
-    # gradeLevel(students, 3)
-    # maxGradeLevel(students, 3)
-    # print(students)
 
     while 1:
         user_input = input("").split(" ")
@@ -89,28 +82,28 @@ def studentInfo(students, name):
                 "teacherLastName",
                 "teacherFirstName",
             ]
-        ]
+        ].to_string()
     )
 
 
 def studentInfoBusRoute(students, name):
-    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]])
+    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]].to_string())
 
 
 def teacherStudents(students, lastName):
     print(
         students.loc[(students["teacherLastName"] == lastName)][
             ["lastName", "firstName"]
-        ]
+        ].to_string()
     )
 
 
 def busRoute(students, busRoute):
-    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]])
+    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]].to_string())
 
 
 def gradeLevel(students, grade):
-    print(students.loc[students["grade"] == grade][["lastName", "firstName"]])
+    print(students.loc[students["grade"] == grade][["lastName", "firstName"]].to_string())
 
 
 def avgGradeLevel(students, grade):
@@ -129,7 +122,7 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ]
+            ].to_string()
         )
     else:
         print(
@@ -142,11 +135,12 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ]
+            ].to_string()
         )
 
+
 def studentsPerGrade(students, grade):
-    print(grade , ": " ,len(students.loc[students["grade"] == grade]))
+    print(grade, ": ", len(students.loc[students["grade"] == grade].to_string()))
 
 
 if __name__ == "__main__":
