@@ -60,7 +60,17 @@ def main():
             else:
                 print(studentInfoBusRoute(students, user_input[1].upper()))
         elif user_input[0] == "T:" or user_input[0] == "Teacher:":
-            print(teacherStudents(students, user_input[1].upper()))
+            teacherStudents(students, user_input[1].upper())
+        elif user_input[0] == "B:" or user_input[0] == "Bus:":
+            busRoute(students, int(user_input[1]))
+        elif user_input[0] == "A:" or user_input[0] == "Average":
+            avgGradeLevel(students, int(user_input[1]))
+        elif user_input[0] == "I" or user_input[0] == "Info":
+            for i in range(0, 7):
+                studentsPerGrade(students, i)
+
+
+        
 
 
 def studentInfo(students, name):
@@ -104,6 +114,9 @@ def avgGradeLevel(students, grade):
 
 def maxGradeLevel(students, grade):
     print(students.loc[students["grade"] == grade]["GPA"].max())
+
+def studentsPerGrade(students, grade):
+    print(grade , ": " ,len(students.loc[students["grade"] == grade]))
 
 
 if __name__ == "__main__":
