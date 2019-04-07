@@ -47,21 +47,21 @@ def main():
 
         if user_input[0] == "Q" or user_input[0] == "Quit":
             break
-        elif user_input[0] == "S:" or user_input[0] == "Student:":
+        elif (user_input[0] == "S:" or user_input[0] == "Student:") and user_input[1].isalpha():
             if len(user_input) == 2:
                 studentInfo(students, user_input[1].upper())
             else:
                 studentInfoBusRoute(students, user_input[1].upper())
-        elif user_input[0] == "T:" or user_input[0] == "Teacher:":
+        elif (user_input[0] == "T:" or user_input[0] == "Teacher:") and user_input[1].isalpha():
             teacherStudents(students, user_input[1].upper())
-        elif user_input[0] == "B:" or user_input[0] == "Bus:":
+        elif (user_input[0] == "B:" or user_input[0] == "Bus:") and user_input[1].isnumeric():
             busRoute(students, int(user_input[1]))
-        elif user_input[0] == "A:" or user_input[0] == "Average:":
+        elif user_input[0] == "A:" or user_input[0] == "Average:" and user_input[1].isnumeric():
             avgGradeLevel(students, int(user_input[1]))
         elif user_input[0] == "I" or user_input[0] == "Info":
             for i in range(0, 7):
                 studentsPerGrade(students, i)
-        elif user_input[0] == "G:" or user_input[0] == "Grade:":
+        elif (user_input[0] == "G:" or user_input[0] == "Grade:") and user_input[1].isnumeric():
             if len(user_input) == 3:
                 if user_input[2] == "H" or user_input[2] == "High":
                     minMaxGradeLevel(students, int(user_input[1]), "max")
