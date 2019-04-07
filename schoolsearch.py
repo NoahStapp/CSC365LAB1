@@ -42,9 +42,6 @@ def createStudents(inputFile):
 def main():
     students = createStudents("students.txt")
 
-    
-    print(students)
-
     while 1:
         user_input = input("").split(" ")
 
@@ -59,7 +56,7 @@ def main():
             teacherStudents(students, user_input[1].upper())
         elif user_input[0] == "B:" or user_input[0] == "Bus:":
             busRoute(students, int(user_input[1]))
-        elif user_input[0] == "A:" or user_input[0] == "Average":
+        elif user_input[0] == "A:" or user_input[0] == "Average:":
             avgGradeLevel(students, int(user_input[1]))
         elif user_input[0] == "I" or user_input[0] == "Info":
             for i in range(0, 7):
@@ -68,7 +65,7 @@ def main():
             if len(user_input) == 3:
                 if user_input[2] == "H" or user_input[2] == "High":
                     minMaxGradeLevel(students, int(user_input[1]), "max")
-                else:
+                elif user_input[2] == "L" or user_input[2] == "Low":
                     minMaxGradeLevel(students, int(user_input[1]), "min")
             else:
                 gradeLevel(students, int(user_input[1]))
@@ -114,32 +111,34 @@ def avgGradeLevel(students, grade):
 
 
 def minMaxGradeLevel(students, grade, flag):
-    if flag == "max":
-        print(
-            students.loc[students.loc[students["grade"] == grade]["GPA"].idxmax()][
-                [
-                    "lastName",
-                    "firstName",
-                    "GPA",
-                    "teacherLastName",
-                    "teacherFirstName",
-                    "bus",
-                ]
-            ].values
-        )
-    else:
-        print(
-            students.loc[students.loc[students["grade"] == grade]["GPA"].idxmin()][
-                [
-                    "lastName",
-                    "firstName",
-                    "GPA",
-                    "teacherLastName",
-                    "teacherFirstName",
-                    "bus",
-                ]
-            ].values
-        )
+
+    if(students[students["grade"] == grade].size):
+        if flag == "max":
+            print(
+                students.loc[students.loc[students["grade"] == grade]["GPA"].idxmax()][
+                    [
+                        "lastName",
+                        "firstName",
+                        "GPA",
+                        "teacherLastName",
+                        "teacherFirstName",
+                        "bus",
+                    ]
+                ].values
+            )
+        else:
+            print(
+                students.loc[students.loc[students["grade"] == grade]["GPA"].idxmin()][
+                    [
+                        "lastName",
+                        "firstName",
+                        "GPA",
+                        "teacherLastName",
+                        "teacherFirstName",
+                        "bus",
+                    ]
+                ].values
+            )
 
 
 def studentsPerGrade(students, grade):
