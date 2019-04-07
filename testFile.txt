@@ -178,7 +178,7 @@ Quit
 
 Bad: HAVIR
 
-// TC-19
+// TC-20
 // Tests Requirments E1
 // invalid command
 // expected output: program does not terminate, prompts again
