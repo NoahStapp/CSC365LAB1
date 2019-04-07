@@ -82,28 +82,28 @@ def studentInfo(students, name):
                 "teacherLastName",
                 "teacherFirstName",
             ]
-        ].to_string()
+        ].values
     )
 
 
 def studentInfoBusRoute(students, name):
-    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]].to_string())
+    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]].values)
 
 
 def teacherStudents(students, lastName):
     print(
         students.loc[(students["teacherLastName"] == lastName)][
             ["lastName", "firstName"]
-        ].to_string()
+        ].values
     )
 
 
 def busRoute(students, busRoute):
-    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]].to_string())
+    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]].values)
 
 
 def gradeLevel(students, grade):
-    print(students.loc[students["grade"] == grade][["lastName", "firstName"]].to_string())
+    print(students.loc[students["grade"] == grade][["lastName", "firstName"]].values)
 
 
 def avgGradeLevel(students, grade):
@@ -122,7 +122,7 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ].to_string()
+            ].values
         )
     else:
         print(
@@ -135,12 +135,12 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ].to_string()
+            ].values
         )
 
 
 def studentsPerGrade(students, grade):
-    print(grade, ": ", len(students.loc[students["grade"] == grade].to_string()))
+    print(grade, ": ", len(students.loc[students["grade"] == grade].values))
 
 
 if __name__ == "__main__":
