@@ -4,19 +4,185 @@
 // TC-1
 // Tests Requirements R3, R4
 // short form command name, existing student
-// expected output: HAVIR,BOBBIE,2,108,HAMER,GAVIN
+// expected output: [['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']]
 
 S: HAVIR
 
 // TC-2
 // Tests Requirements R3, R4
 // short form command name, non-existing student
-// expected output: <empty line>
+// expected output: []
 
 S: NEMO
 
 // TC-3
+// Tests Requirements R3, R4
+// long form command name, existing student
+// expected output: ['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']
+
+Student: HAVIR
+
+// TC-4
+// Tests Requirements R3, R4
+// long form command name, non-existing student
+// expected output: []
+
+Student: NEMO
+
+// TC-5
+// Tests Requirements R3, R5
+// short form command name, existing student
+// expected output: [['HAVIR' 'BOBBIE' 0]]
+
+S: HAVIR B
+
+// TC-6
+// Tests Requirements R3, R5
+// short form command name, non-existing student
+// expected output: []
+
+S: NEMO B
+
+// TC-7
+// Tests Requirements R3, R5
+// long form command name, existing student
+// expected output: ['HAVIR' 'BOBBIE' 0]
+
+Student: HAVIR Bus
+
+// TC-8
+// Tests Requirements R3, R5
+// long form command name, non-existing student
+// expected output: []
+
+Student: NEMO Bus
+
+// TC-9
+// Tests Requirements R3, R6
+// short form command name, existing teacher
+// expected output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+ ]
+
+T: HAMER
+
+// TC-10
+// Tests Requirements R3, R6
+// short form command name, non-existing teacher
+// expected output: []
+
+T: SMITH
+
+// TC-11
+// Tests Requirements R3, R6
+// long form command name, existing teacher
+// expected output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+]
+
+Teacher: Hamer
+
+// TC-12
+// Tests Requirements R3, R6
+// long form command name, non-existing teacher
+// expected output: []
+
+Teacher: Smith
+
+// TC-13
+// Tests Requirements R3, R7
+// short form command name, existing grade
+// expected output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+G: 3
+
+// TC-14
+// Tests Requirements R3, R7
+// short form command name, non-existing grade
+// expected output: []
+
+G: 10
+
+// TC-15
+// Tests Requirements R3, R7
+// long form command name, existing grade
+// expected output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+Grade: 3
+
+// TC-16
+// Tests Requirements R3, R7
+// long form command name, non-existing grade
+// expected output: []
+
+Grade: 10
+
+// TC-17
 // Tests Requirments R3, R13
 // quit command
 // expected output: program terminates
+
 Q
+
+// TC-18
+// Tests Requirments R3, R13
+// quit command
+// expected output: program terminates
+
+Quit
+
+// TC-19
+// Tests Requirments E1
+// invalid command
+// expected output: program does not terminate, prompts again
+
+Bad: HAVIR
+
+// TC-19
+// Tests Requirments E1
+// invalid command
+// expected output: program does not terminate, prompts again
+
+B: HAMER
+
+
