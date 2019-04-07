@@ -49,6 +49,9 @@ def main():
     # maxGradeLevel(students, 3)
     # print(students)
 
+    
+    print(students)
+
     while 1:
         user_input = input("").split(" ")
 
