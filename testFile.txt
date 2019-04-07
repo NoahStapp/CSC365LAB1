@@ -1,0 +1,22 @@
+// CSC 365. Spring 2019
+// Lab 1-1 test suite
+
+// TC-1
+// Tests Requirements R3, R4
+// short form command name, existing student
+// expected output: HAVIR,BOBBIE,2,108,HAMER,GAVIN
+
+S: HAVIR
+
+// TC-2
+// Tests Requirements R3, R4
+// short form command name, non-existing student
+// expected output: <empty line>
+
+S: NEMO
+
+// TC-3
+// Tests Requirments R3, R13
+// quit command
+// expected output: program terminates
+Q

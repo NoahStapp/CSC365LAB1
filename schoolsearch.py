@@ -41,13 +41,6 @@ def createStudents(inputFile):
 
 def main():
     students = createStudents("students.txt")
-    # studentInfo(students, "COMO")
-    # studentBusRoute(students, "COMO")
-    # teacherStudents(students, "HANTZ", "JED")
-    # busRoute(students, 52)
-    # gradeLevel(students, 3)
-    # maxGradeLevel(students, 3)
-    # print(students)
 
     
     print(students)
@@ -92,28 +85,28 @@ def studentInfo(students, name):
                 "teacherLastName",
                 "teacherFirstName",
             ]
-        ]
+        ].values
     )
 
 
 def studentInfoBusRoute(students, name):
-    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]])
+    print(students.loc[students["lastName"] == name][["lastName", "firstName", "bus"]].values)
 
 
 def teacherStudents(students, lastName):
     print(
         students.loc[(students["teacherLastName"] == lastName)][
             ["lastName", "firstName"]
-        ]
+        ].values
     )
 
 
 def busRoute(students, busRoute):
-    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]])
+    print(students.loc[students["bus"] == busRoute][["lastName", "firstName"]].values)
 
 
 def gradeLevel(students, grade):
-    print(students.loc[students["grade"] == grade][["lastName", "firstName"]])
+    print(students.loc[students["grade"] == grade][["lastName", "firstName"]].values)
 
 
 def avgGradeLevel(students, grade):
@@ -132,7 +125,7 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ]
+            ].values
         )
     else:
         print(
@@ -145,11 +138,12 @@ def minMaxGradeLevel(students, grade, flag):
                     "teacherFirstName",
                     "bus",
                 ]
-            ]
+            ].values
         )
 
+
 def studentsPerGrade(students, grade):
-    print(grade , ": " ,len(students.loc[students["grade"] == grade]))
+    print(grade, ": ", len(students.loc[students["grade"] == grade].values))
 
 
 if __name__ == "__main__":
