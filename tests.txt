@@ -1,0 +1,303 @@
+// CSC 365. Spring 2019
+// Lab 1-1 test suite
+
+// TC-1
+// Tests Requirements R3, R4
+// short form command name, existing student
+// expected output: [['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']]
+
+S: HAVIR
+
+// TC-2
+// Tests Requirements R3, R4
+// short form command name, non-existing student
+// expected output: []
+
+S: NEMO
+
+// TC-3
+// Tests Requirements R3, R4
+// long form command name, existing student
+// expected output: ['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']
+
+Student: HAVIR
+
+// TC-4
+// Tests Requirements R3, R4
+// long form command name, non-existing student
+// expected output: []
+
+Student: NEMO
+
+// TC-5
+// Tests Requirements R3, R5
+// short form command name, existing student
+// expected output: [['HAVIR' 'BOBBIE' 0]]
+
+S: HAVIR B
+
+// TC-6
+// Tests Requirements R3, R5
+// short form command name, non-existing student
+// expected output: []
+
+S: NEMO B
+
+// TC-7
+// Tests Requirements R3, R5
+// long form command name, existing student
+// expected output: ['HAVIR' 'BOBBIE' 0]
+
+Student: HAVIR Bus
+
+// TC-8
+// Tests Requirements R3, R5
+// long form command name, non-existing student
+// expected output: []
+
+Student: NEMO Bus
+
+// TC-9
+// Tests Requirements R3, R6
+// short form command name, existing teacher
+// expected output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+ ]
+
+T: HAMER
+
+// TC-10
+// Tests Requirements R3, R6
+// short form command name, non-existing teacher
+// expected output: []
+
+T: SMITH
+
+// TC-11
+// Tests Requirements R3, R6
+// long form command name, existing teacher
+// expected output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+]
+
+Teacher: Hamer
+
+// TC-12
+// Tests Requirements R3, R6
+// long form command name, non-existing teacher
+// expected output: []
+
+Teacher: Smith
+
+// TC-13
+// Tests Requirements R3, R7
+// short form command name, existing grade
+// expected output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+G: 3
+
+// TC-14
+// Tests Requirements R3, R7
+// short form command name, non-existing grade
+// expected output: []
+
+G: 10
+
+// TC-15
+// Tests Requirements R3, R7
+// long form command name, existing grade
+// expected output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+Grade: 3
+
+// TC-16
+// Tests Requirements R3, R7
+// long form command name, non-existing grade
+// expected output: []
+
+Grade: 10
+
+// TC-17
+// Tests Requirments R3, R13
+// quit command
+// expected output: program terminates
+
+Q
+
+// TC-18
+// Tests Requirments R3, R13
+// quit command
+// expected output: program terminates
+
+Quit
+
+// TC-19
+// Tests Requirments E1
+// invalid command
+// expected output: program does not terminate, prompts again
+
+Bad: HAVIR
+
+// TC-20
+// Tests Requirments E1
+// invalid command
+// expected output: program does not terminate, prompts again
+
+B: HAMER
+
+// TC-21
+// Tests Requirements R8
+// short form command name, non-existing bus route
+// expected output: [] 
+
+B: 105
+
+// TC-22
+// Tests Requirements R8
+// long form command name for existing bus route
+// expected output: [['SCHOENECKER' 'PHUONG']
+                    ['FINCHMAN' 'MATHILDA']
+                    ['BRODERSEN' 'HYE']
+                    ['HAVIR' 'BOBBIE']
+                    ['MASSART' 'ELDON']
+                    ['GARTH' 'JOHN']
+                    ['CREMEANS' 'RANDOLPH']
+                    ['KREESE' 'CARRIE']]
+
+Bus: 0
+
+// TC-23
+// Tests Requirements R8
+// short form command name for existing bus route
+// expected output: [['SCHOENECKER' 'PHUONG']
+                    ['FINCHMAN' 'MATHILDA']
+                    ['BRODERSEN' 'HYE']
+                    ['HAVIR' 'BOBBIE']
+                    ['MASSART' 'ELDON']
+                    ['GARTH' 'JOHN']
+                    ['CREMEANS' 'RANDOLPH']
+                    ['KREESE' 'CARRIE']]
+
+B: 0
+
+// TC-24
+// Tests Requirements R9
+// short form command name for non-existing grade 
+// expected output: -
+
+G: 5 H
+
+// TC-25
+// Tests Requirements R9
+// short form command name for non-existing label
+// expected output: -
+
+G: 3 M
+
+// TC-26
+// Tests Requirements R9
+// short form command name for existing grades and labels
+// expected output: ['SAELEE' 'DANILO' 2.85 'FALKER' 'ADOLPH' 54] for both
+
+G: 1 L
+
+// TC-27
+// Tests Requirements R9
+// long form command name for existing grades and labels
+// expected output: ['SAELEE' 'DANILO' 2.85 'FALKER' 'ADOLPH' 54] for both
+
+Grade: 1 L
+
+// TC-28
+// Tests Requirements R10
+// short form command name for grades with no students
+// expected output: nan
+
+A: 0
+
+// TC-29
+// Tests Requirements R10
+// long form command name for grades with no students
+// expected output: nan
+
+Average: 5
+
+// TC-30
+// Tests Requirements R10
+// short form command name for valid grade with students
+// expected output: 3.048888888888889
+
+A: 3
+
+// TC-31
+// Tests Requirements R11
+// long form command name for valid information about student
+// expected output: 0 :  0
+                    1 :  2
+                    2 :  13
+                    3 :  9
+                    4 :  15
+                    5 :  0
+                    6 :  21
+
+Info
+
+// TC-32
+// Tests Requirements R11
+// short form command name for valid information about student
+// expected output: 0 :  0
+                    1 :  2
+                    2 :  13
+                    3 :  9
+                    4 :  15
+                    5 :  0
+                    6 :  21
+
+I
+
+// TC-33
+// Tests Requirements R11
+// quitting command
+// expected action: [quits]
+
+Q

@@ -1,0 +1,169 @@
+// TC-1
+// output: [['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']]
+
+// TC-2
+// output: []
+
+// TC-3
+// output: ['HAVIR' 'BOBBIE' '2' '108' 'HAMER' 'GAVIN']
+
+// TC-4
+// output: []
+
+// TC-5
+// output: [['HAVIR' 'BOBBIE' 0]]
+
+// TC-6
+// output: []
+
+// TC-7
+// output: ['HAVIR' 'BOBBIE' 0]
+
+// TC-8
+// output: []
+
+// TC-9
+// output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+ ]
+
+// TC-10
+// output: []
+
+// TC-11
+// output: [
+  ['LIBRANDI' 'TODD']
+  ['HAVIR' 'BOBBIE']
+  ['SARAO' 'DIEDRA']
+  ['VANCOTT' 'MIKE']
+  ['WICINSKY' 'TERESE']
+  ['KOZOLA' 'BUSTER']
+  ['MULLINGS' 'LEIGHANN']
+  ['BUSSMANN' 'BILLY']
+  ['BERBES' 'DICK']
+  ['MULGREW' 'RANDELL']
+  ['TOWLEY' 'LANE']
+]
+
+// TC-12
+// output: []
+
+// TC-13
+// output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+// TC-14
+// output: []
+
+// TC-15
+// output: [
+  ['COOKUS' 'XUAN']
+  ['ELHADDAD' 'SHANTE']
+  ['BRODERSEN' 'HYE']
+  ['SWEDLUND' 'SHARRI']
+  ['CIGANEK' 'MANIE']
+  ['COVINGTON' 'TOMAS']
+  ['EARLY' 'TORY']
+  ['LINHART' 'LELA']
+  ['THEUNISSEN' 'GRACE']
+]
+
+// TC-16
+// output: []
+
+// TC-17
+// output: program terminates
+
+// TC-18
+// output: program terminates
+
+// TC-19
+// output: program does not terminate, prompts again
+
+// TC-20
+// output: program does not terminate, prompts again
+
+// TC-21
+// output: [] 
+
+// TC-22
+// output: [['SCHOENECKER' 'PHUONG']
+                    ['FINCHMAN' 'MATHILDA']
+                    ['BRODERSEN' 'HYE']
+                    ['HAVIR' 'BOBBIE']
+                    ['MASSART' 'ELDON']
+                    ['GARTH' 'JOHN']
+                    ['CREMEANS' 'RANDOLPH']
+                    ['KREESE' 'CARRIE']]
+
+// TC-23
+// output: [['SCHOENECKER' 'PHUONG']
+                    ['FINCHMAN' 'MATHILDA']
+                    ['BRODERSEN' 'HYE']
+                    ['HAVIR' 'BOBBIE']
+                    ['MASSART' 'ELDON']
+                    ['GARTH' 'JOHN']
+                    ['CREMEANS' 'RANDOLPH']
+                    ['KREESE' 'CARRIE']]
+
+// TC-24
+// output: program does not terminate, prompts again
+
+// TC-25
+// output: program does not terminate, prompts again
+
+// TC-26
+// output: ['SAELEE' 'DANILO' 2.85 'FALKER' 'ADOLPH' 54] 
+
+// TC-27
+// output: ['SAELEE' 'DANILO' 2.85 'FALKER' 'ADOLPH' 54]
+
+// TC-28
+// output: nan
+
+// TC-29
+// output: nan
+
+// TC-30
+// output: 3.048888888888889
+
+// TC-31
+// output:          0 :  0
+                    1 :  2
+                    2 :  13
+                    3 :  9
+                    4 :  15
+                    5 :  0
+                    6 :  21
+
+// TC-32
+// output:          0 :  0
+                    1 :  2
+                    2 :  13
+                    3 :  9
+                    4 :  15
+                    5 :  0
+                    6 :  21
+
+
+// TC-33
+// output: Program terminates
